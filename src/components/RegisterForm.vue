@@ -59,6 +59,9 @@
       <vee-field as="select" name="country"
         class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
           duration-500 focus:outline-none focus:border-black rounded">
+        <option value="Morocco">Morocco</option>
+        <option value="Japan">Japan</option>
+        <option value="India">India</option>
         <option value="USA">USA</option>
         <option value="Mexico">Mexico</option>
         <option value="Germany">Germany</option>
@@ -70,7 +73,9 @@
     <div class="mb-3 pl-6">
       <vee-field type="checkbox" name="tos" value="1"
         class="w-4 h-4 float-left -ml-6 mt-1 rounded inline-block" />
-      <label class="inline-block">Accept terms of service</label>
+      <i18n-t class="inline-block" keypath="register.accept" tag="label">
+        <a href="#">{{ $t('register.TOS') }}</a>
+      </i18n-t>
       <ErrorMessage class="text-red-600 block" name="tos" />
     </div>
     <button type="submit" :disabled="reg_in_submission"
